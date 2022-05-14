@@ -167,7 +167,7 @@ if opc1 == "3":
 			client.connect(hostname=hostname, username=username, password=password, timeout=4)
 		except socket.timeout:
         		
-        		print(f"[!] Host: {hostname} is unreachable, timed out.")
+        		print(f"[!] Host: {hostname} nie osiagalny, timed out.")
         		return False
 		
 		except paramiko.AuthenticationException:

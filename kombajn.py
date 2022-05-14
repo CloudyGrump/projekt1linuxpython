@@ -9,10 +9,9 @@ import netifaces as ni
 from netaddr import *
 
 adrrip = ni.ifaddresses('eth0')[ni.AF_INET][0]['addr']
-adrip = adrrip + "/24"
+mask = IPNetwork(str(adrrip))
 ip_addr = socket.gethostbyname(socket.gethostname())
-mask = IPNetwork(str(adrip))
-
+adrip = adrrip + "/24"
 
 
 def scan(ip):
